@@ -1,0 +1,55 @@
+ruby@ruby-VirtualBox:~/blog2$ rake db:migrate --trace
+** Invoke db:migrate (first_time)
+** Invoke db:load_config (first_time)
+** Invoke environment (first_time)
+** Execute environment
+** Execute db:load_config
+** Execute db:migrate
+rake aborted!
+SyntaxError: /home/ruby/blog2/db/migrate/20190624165348_create_users.rb:10: syntax error, unexpected end-of-input, expecting end
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `block in require_with_bootsnap_lfi'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require_with_bootsnap_lfi'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/zeitwerk-2.1.6/lib/zeitwerk/kernel.rb:23:in `require'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:302:in `block in require'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:268:in `load_dependency'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activesupport-6.0.0.rc1/lib/active_support/dependencies.rb:302:in `require'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1001:in `load_migration'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:997:in `migration'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:992:in `disable_ddl_transaction'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1358:in `use_transaction?'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1350:in `ddl_transaction'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1299:in `execute_migration_in_transaction'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1271:in `block in migrate_without_lock'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1270:in `each'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1270:in `migrate_without_lock'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1220:in `migrate'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1051:in `up'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/migration.rb:1026:in `migrate'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/tasks/database_tasks.rb:226:in `migrate'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/railties/databases.rake:83:in `block (3 levels) in <main>'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/railties/databases.rake:81:in `each'
+/home/ruby/.rvm/gems/ruby-2.6.3/gems/activerecord-6.0.0.rc1/lib/active_record/railties/databases.rake:81:in `block (2 levels) in <main>'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273:in `block in execute'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273:in `each'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273:in `execute'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:214:in `block in invoke_with_call_chain'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/monitor.rb:230:in `mon_synchronize'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:194:in `invoke_with_call_chain'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:183:in `invoke'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:160:in `invoke_task'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:116:in `block (2 levels) in top_level'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:116:in `each'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:116:in `block in top_level'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:125:in `run_with_threads'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:110:in `top_level'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:83:in `block in run'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:186:in `standard_exception_handling'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/application.rb:80:in `run'
+/home/ruby/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+/home/ruby/.rvm/rubies/ruby-2.6.3/bin/rake:29:in `load'
+/home/ruby/.rvm/rubies/ruby-2.6.3/bin/rake:29:in `<main>'
+Tasks: TOP => db:migrate
+
